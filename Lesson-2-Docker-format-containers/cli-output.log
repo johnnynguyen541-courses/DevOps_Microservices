@@ -1,0 +1,137 @@
+Script started on Thu May  5 00:44:21 2022
+[1m[7m%[27m[1m[0m                                                                                                                                        ]7;file://Johnnys-MacBook-Pro.local/Users/johnny/Desktop/repo/open-src/DevOps_Microservices/Lesson-2-Docker-format-containers[0m[27m[24m[Jjohnny@Johnnys-MacBook-Pro Lesson-2-Docker-format-containers % [K[?2004h[H[2J[0m[27m[24m[Jjohnny@Johnnys-MacBook-Pro Lesson-2-Docker-format-containers % [Kppwd[?2004l
+/Users/johnny/Desktop/repo/open-src/DevOps_Microservices/Lesson-2-Docker-format-containers
+[1m[7m%[27m[1m[0m                                                                                                                                        ]7;file://Johnnys-MacBook-Pro.local/Users/johnny/Desktop/repo/open-src/DevOps_Microservices/Lesson-2-Docker-format-containers[0m[27m[24m[Jjohnny@Johnnys-MacBook-Pro Lesson-2-Docker-format-containers % [K[?2004hppwd p  [H[2J[0m[27m[24m[Jjohnny@Johnnys-MacBook-Pro Lesson-2-Docker-format-containers % [Klls -l[?2004l
+total 8
+drwxr-xr-x   3 johnny  staff   96 May  5 00:41 basic-makefile
+drwxr-xr-x   8 johnny  staff  256 May  4 12:35 class-demos
+-rw-r--r--   1 johnny  staff  512 May  5 00:44 cli-output.log
+drwxr-xr-x  12 johnny  staff  384 May  4 12:35 myrepo
+drwxr-xr-x  13 johnny  staff  416 May  5 00:38 setup-local
+[1m[7m%[27m[1m[0m                                                                                                                                        ]7;file://Johnnys-MacBook-Pro.local/Users/johnny/Desktop/repo/open-src/DevOps_Microservices/Lesson-2-Docker-format-containers[0m[27m[24m[Jjohnny@Johnnys-MacBook-Pro Lesson-2-Docker-format-containers % [K[?2004hccd setup-local[1m/[0m[0m            c  sse
+[Jsecurity    sed         segedit     sendmail    serialver   servertool  setkey      setquota    setuids.d   
+securityd   seeksize.d  select      seq         serverinfo  set         setopt      setregion   [A[A[0m[27m[24m[63Cse[Ku tup
+[J[A[68C-local/make              s  ccd setup-local[?2004l
+[J[1m[7m%[27m[1m[0m                                                                                                                                        ]7;file://Johnnys-MacBook-Pro.local/Users/johnny/Desktop/repo/open-src/DevOps_Microservices/Lesson-2-Docker-format-containers/setup-local[0m[27m[24m[Jjohnny@Johnnys-MacBook-Pro setup-local % [K[?2004hlls -l[?2004l
+total 56
+-rw-r--r--  1 johnny  staff   245 May  5 00:36 Makefile
+-rw-r--r--  1 johnny  staff   837 May  5 00:38 README.md
+-rw-r--r--  1 johnny  staff  1359 May  5 00:38 azure-pipelines.yml
+-rwxr-xr-x  1 johnny  staff   580 May  5 00:39 cli.py
+drwxr-xr-x  4 johnny  staff   128 May  5 00:38 myrepolib
+-rw-r--r--  1 johnny  staff  1437 May  5 00:38 notebook.ipynb
+-rw-r--r--  1 johnny  staff  1761 May  5 00:37 requirements.txt
+drwxr-xr-x  3 johnny  staff    96 May  5 00:38 tests
+drwxr-xr-x  9 johnny  staff   288 May  5 00:36 venv
+-rw-r--r--  1 johnny  staff   338 May  5 00:38 web.py
+[1m[7m%[27m[1m[0m                                                                                                                                        ]7;file://Johnnys-MacBook-Pro.local/Users/johnny/Desktop/repo/open-src/DevOps_Microservices/Lesson-2-Docker-format-containers/setup-local[0m[27m[24m[Jjohnny@Johnnys-MacBook-Pro setup-local % [K[?2004hccat requirements.txt[1m [0m[0m [?2004l
+appnope==0.1.3
+argon2-cffi==21.3.0
+argon2-cffi-bindings==21.2.0
+astroid==2.11.4
+asttokens==2.0.5
+attrs==21.4.0
+backcall==0.2.0
+beautifulsoup4==4.11.1
+black==22.3.0
+bleach==5.0.0
+certifi==2021.10.8
+cffi==1.15.0
+charset-normalizer==2.0.12
+click==8.1.3
+coverage==6.3.2
+debugpy==1.6.0
+decorator==5.1.1
+defusedxml==0.7.1
+dill==0.3.4
+entrypoints==0.4
+executing==0.8.3
+fastjsonschema==2.15.3
+Flask==2.1.2
+idna==3.3
+importlib-metadata==4.11.3
+importlib-resources==5.7.1
+iniconfig==1.1.1
+ipykernel==6.13.0
+ipython==8.3.0
+ipython-genutils==0.2.0
+ipywidgets==7.7.0
+isort==5.10.1
+itsdangerous==2.1.2
+jedi==0.18.1
+Jinja2==3.1.2
+jsonschema==4.4.0
+jupyter==1.0.0
+jupyter-client==7.3.0
+jupyter-console==6.4.3
+jupyter-core==4.10.0
+jupyterlab-pygments==0.2.2
+jupyterlab-widgets==1.1.0
+lazy-object-proxy==1.7.1
+MarkupSafe==2.1.1
+matplotlib-inline==0.1.3
+mccabe==0.7.0
+mistune==0.8.4
+mypy-extensions==0.4.3
+nbclient==0.6.2
+nbconvert==6.5.0
+nbformat==5.4.0
+nbval==0.9.6
+nest-asyncio==1.5.5
+notebook==6.4.11
+numpy==1.22.3
+packaging==21.3
+pandas==1.4.2
+pandocfilters==1.5.0
+parso==0.8.3
+pathspec==0.9.0
+pexpect==4.8.0
+pickleshare==0.7.5
+platformdirs==2.5.2
+pluggy==1.0.0
+prometheus-client==0.14.1
+prompt-toolkit==3.0.29
+psutil==5.9.0
+ptyprocess==0.7.0
+pure-eval==0.2.2
+py==1.11.0
+pycparser==2.21
+Pygments==2.12.0
+pylint==2.13.8
+pyparsing==3.0.8
+pyrsistent==0.18.1
+pytest==7.1.2
+pytest-cov==3.0.0
+python-dateutil==2.8.2
+pytz==2022.1
+pyzmq==22.3.0
+qtconsole==5.3.0
+QtPy==2.1.0
+requests==2.27.1
+Send2Trash==1.8.0
+six==1.16.0
+soupsieve==2.3.2.post1
+stack-data==0.2.0
+terminado==0.13.3
+tinycss2==1.1.1
+tomli==2.0.1
+tornado==6.1
+traitlets==5.1.1
+typing_extensions==4.2.0
+urllib3==1.26.9
+wcwidth==0.2.5
+webencodings==0.5.1
+Werkzeug==2.1.2
+widgetsnbextension==3.6.0
+wrapt==1.14.1
+zipp==3.8.0
+[1m[7m%[27m[1m[0m                                                                                                                                        ]7;file://Johnnys-MacBook-Pro.local/Users/johnny/Desktop/repo/open-src/DevOps_Microservices/Lesson-2-Docker-format-containers/setup-local[0m[27m[24m[Jjohnny@Johnnys-MacBook-Pro setup-local % [K[?2004hcat requirements.txt | grep -ie had[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                        ]7;file://Johnnys-MacBook-Pro.local/Users/johnny/Desktop/repo/open-src/DevOps_Microservices/Lesson-2-Docker-format-containers/setup-local[0m[27m[24m[Jjohnny@Johnnys-MacBook-Pro setup-local % [K[?2004heexit[?2004l
+
+Saving session...
+...copying shared history...
+...saving history...truncating history files...
+...completed.
+Deleting expired sessions...       7 completed.
+
+Script done on Thu May  5 01:42:50 2022
