@@ -16,7 +16,7 @@ def lambda_handler(event, context):
         body = None
     
     ## TO DO: Get the wikipedia "entity" from the body of the request
-    entity = None
+    entity = event["entity"]
     res = wikipedia.summary(entity, sentences=1) # first sentence, result
 
     # print statements
@@ -26,6 +26,9 @@ def lambda_handler(event, context):
     ## TO DO: Format the response as JSON and return the result
     response = {
         ## your code here
+        "statusCode": "200",
+        "headers": {"Content-type": "application/json"},
+        "body": json.dumps({"message": res})
     }
     
     return response
