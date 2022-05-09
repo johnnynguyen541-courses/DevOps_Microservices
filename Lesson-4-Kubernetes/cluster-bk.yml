@@ -1,0 +1,54 @@
+---
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: uda-arm
+  region: us-west-2
+  version: 1.0
+
+managedNodeGroups:
+- name: ng-arm-1
+  instanceType: t4g.large
+  desiredCapacity: 2
+  # labels: {role: worker}
+  ami: ami-0f48d15c9efb5f63d
+  ssh:
+    allow: true
+    publicKeyName: jonnypottie-jumpbox
+  preBootstrapCommands:
+  - kubelet --version > /etc/eks/test-preBootstrapCommands
+  overrideBootstrapCommand: |
+    #!/bin/bash
+    set -ex
+    /etc/eks/bootstrap.sh uda-arm --kubelet-extra-args "--node-labels=alpha.eksctl.io/cluster-name=uda-arm,alpha.eksctl.io/nodegroup-name=ginny-mng-custom-ami,eks.amazonaws.com/nodegroup=ginny-mng-custom-ami,eks.amazonaws.com/nodegroup-image=ami-0030109261aa0205b"
+    # /etc/eks/bootstrap.sh $[metadata/name] --kubelet-extra-args 
+    # "--node-labels=alpha.eksctl.io/
+    # cluster-name=$[metadata/name],alpha.eksctl.io/
+    # nodegroup-name=$[managedNodeGroups/name],eks.amazonaws.com/
+    # nodegroup=$[managedNodeGroups/name],eks.amazonaws.com/
+    # nodegroup-image=$[managedNodeGroups/ami]"
+
+  - name: ng1
+    ami: ami-0f48d15c9efb5f63d
+    instanceType: 
+    #instanceSelector:
+    #  vCPUs: 2
+    #  memory: 2GiB #
+    #  cpuArchitecture: x86_64 # default value
+    #minSize: 1
+    #maxSize: 1
+    desiredCapacity: 1
+    ssh:
+      allow: true
+      publicKeyPath: ~/.ssh/id_rsa.pub
+    overrideBootstrapCommand: |
+      #!/bin/bash
+      /etc/eks/bootstrap.sh udaeks --kubelet-extra-args '--node-labels=eks.amazonaws.com/cluster-name=udaeks,eks.amazonaws.com/nodegroup-name=ng1,eks.amazonaws.com/nodegroup=ng1,eks.amazonaws.com/nodegroup-image=ami-0f48d15c9efb5f63d'
+      # /etc/eks/bootstrap.sh udaeks --kubelet-extra-args
+      # '--node-labels=eks.amazonaws.com/
+      # cluster-name=udaeks,eks.amazonaws.com/
+      # nodegroup-name=ng1,eks.amazonaws.com/
+      # nodegroup=ng1,eks.amazonaws.com/
+      # nodegroup-image=ami-0f48d15c9efb5f63d'
+...

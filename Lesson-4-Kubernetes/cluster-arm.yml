@@ -1,0 +1,31 @@
+---
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+# Or run eksctl create cluster demo --instance-selector-cpu-architecture=arm64 --instance-selector-vcpus=2
+
+metadata:
+  name: uda-arm
+  region: us-west-2
+
+managedNodeGroups:
+- name: ng-arm-1
+  instanceType: t4g.large
+  desiredCapacity: 2
+  # labels: {role: worker}
+  ami: ami-0f48d15c9efb5f63d
+  ssh:
+    allow: true
+    publicKeyName: jonnypottie-jumpbox
+  preBootstrapCommands:
+  - kubelet --version > /etc/eks/test-preBootstrapCommands
+  overrideBootstrapCommand: |
+    #!/bin/bash
+    set -ex
+    /etc/eks/bootstrap.sh uda-arm --kubelet-extra-args "--node-labels=alpha.eksctl.io/cluster-name=uda-arm,alpha.eksctl.io/nodegroup-name=ng-arm-1,eks.amazonaws.com/nodegroup=ng-arm-1,eks.amazonaws.com/nodegroup-image=ami-0f48d15c9efb5f63d"
+    # /etc/eks/bootstrap.sh $[metadata/name] --kubelet-extra-args 
+    # "--node-labels=alpha.eksctl.io/
+    # cluster-name=$[metadata/name],alpha.eksctl.io/
+    # nodegroup-name=$[managedNodeGroups/name],eks.amazonaws.com/
+    # nodegroup=$[managedNodeGroups/name],eks.amazonaws.com/
+    # nodegroup-image=$[managedNodeGroups/ami]"
+...
